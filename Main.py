@@ -40,10 +40,10 @@ async def main():
     async def cmd_test_id(message: types.Message):
         await message.reply(f"Твой ID: {message.from_user.id}")
 
-    # Проверка на отправку сообщения по ID чата
+    # Проверка на отправку сообщения по ID чата, можно аргументы пихать дохуя ыыыыыыыыыыы
     @dp.message(Command("test3"))
     async def cmd_test3(massage: types.Message, bot: Bot):
-        await bot.send_dice(866669644, emoji=DiceEmoji.DICE)
+        await bot.send_dice(500679707, emoji=DiceEmoji.DICE, disable_notification=True)
 
     # dp.include_router(router)
     # await bot.delete_webhook(drop_pending_updates=True)
