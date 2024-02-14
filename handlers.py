@@ -1,7 +1,6 @@
-from aiogram import types, F, Router
+from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import Command
-
 
 router = Router()
 
@@ -14,6 +13,3 @@ async def start_handler(msg: Message):
 @router.message()
 async def message_handler(msg: Message):
     await msg.answer(f"Твой ID: {msg.from_user.id}")
-
-
-
