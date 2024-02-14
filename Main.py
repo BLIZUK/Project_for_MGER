@@ -41,9 +41,9 @@ async def main():
         await message.reply(f"Твой ID: {message.from_user.id}")
 
     # Проверка на отправку сообщения по ID чата
-    @dp.message(Command("ASYA"))
-    async def cmd_test3(bot: Bot):
-        await bot.send_dice(1086046806, emoji=DiceEmoji.DICE)
+    @dp.message(Command("test3"))
+    async def cmd_test3(massage: types.Message, bot: Bot):
+        await bot.send_dice(866669644, emoji=DiceEmoji.DICE)
 
     # dp.include_router(router)
     # await bot.delete_webhook(drop_pending_updates=True)
