@@ -1,16 +1,14 @@
 import asyncio
 import logging
 
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, Router
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.filters.command import Command
-from aiogram.enums.dice_emoji import DiceEmoji
+
 
 import config
 
-
-# from handlers import router
+from routers import router as main_router
 
 
 async def main():
@@ -21,32 +19,11 @@ async def main():
     # Но явное лучше неявного =]
     dp = Dispatcher(storage=MemoryStorage())
 
-    #  Старт бота
-    @dp.message(Command("start"))
-    async def cmd_start(message: types.Message):
-        await message.answer("Hello!")
+    # Вообще можно имя не указывать и ничего не передавать, но будем соблюдать этику
+    router = Router(name=__name__)
 
-    # Отвечает на сообщение
-    @dp.message(Command("test1"))
-    async def cmd_test1(message: types.Message):
-        await message.reply("test1")
+    dp.include_router(main_router)
 
-    # Пишет сообщение
-    @dp.message(Command("test2"))
-    async def cmd_test2(message: types.Message):
-        await message.answer("test2")
-
-    @dp.message(Command("ID"))
-    async def cmd_test_id(message: types.Message):
-        await message.reply(f"Твой ID: {message.from_user.id}")
-
-    # Проверка на отправку сообщения по ID чата, можно аргументы пихать дохуя ыыыыыыыыыыы
-    @dp.message(Command("test3"))
-    async def cmd_test3(massage: types.Message, bot: Bot):
-        await bot.send_dice(500679707, emoji=DiceEmoji.DICE, disable_notification=True)
-
-    # dp.include_router(router)
-    # await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
 
 
