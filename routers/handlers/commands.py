@@ -50,11 +50,11 @@ async def cmd_test3(massage: Message, bot: Bot):
 
     @router.message(F.text.lower() == "андрей" or "blizuks")
     async def send_emoji_id(message: Message):
-        await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.DICE)
+        await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.SLOT_MACHINE)
 
     @router.message(F.text.lower() == "ваня" or "иван")
     async def send_emoji_id(message: Message):
-        await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.DICE)
+        await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.SLOT_MACHINE)
 
 
 @router.message(Command("/help_end"))

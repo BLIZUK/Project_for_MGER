@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Углубление работы команд и добавление кнопок." />
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Все никак не могу остановиться, зализываю мелкие огрехи." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708548715503</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Все никак не могу остановиться, зализываю мелкие огрехи.">
+      <created>1708549074289</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708549074289</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +180,7 @@
     <MESSAGE value="Update 3" />
     <MESSAGE value="Начальная декомпозиция. Добавление кнопок." />
     <MESSAGE value="Углубление работы команд и добавление кнопок." />
-    <option name="LAST_COMMIT_MESSAGE" value="Углубление работы команд и добавление кнопок." />
+    <MESSAGE value="Все никак не могу остановиться, зализываю мелкие огрехи." />
+    <option name="LAST_COMMIT_MESSAGE" value="Все никак не могу остановиться, зализываю мелкие огрехи." />
   </component>
 </project>
