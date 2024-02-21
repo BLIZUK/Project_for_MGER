@@ -1,52 +1,61 @@
-from aiogram import Router, F, Bot
+#  Подключение библиотек
+from aiogram import Router, F, Bot, types
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.dice_emoji import DiceEmoji
-
+from aiogram.enums.parse_mode import ParseMode
 
 #  Импортируем кнопки из файла button
-from .button import get_yes_or_no
-
+from .button import help_buttons
+from .text import welcome, help_txt, help_end_txt, ID_peopl, test1_txt, test2_txt, test3_txt
 
 router = Router(name=__name__)
 
 
-# Сервисные команды
-@router.message(Command("start"))   # [1] --> [2]
+# Включение чата и вызов приветственного ответа
+@router.message(Command("start"))  # [1] --> [2]
 async def cmd_start(message: Message):
-    await message.answer("Стартуем?", reply_markup=get_yes_or_no())
+    await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome, parse_mode=ParseMode.HTML)
 
 
-# Отвечает на сообщение
+#  Вызывает окно с командами
+@router.message(Command("help"))
+async def cmd_help(message: types.Message):
+    await message.answer(help_txt, reply_markup=help_buttons())
+
+
+#  Отвечает на сообщение
 @router.message(Command("test1"))
 async def cmd_test1(message: Message):
-    await message.reply("test1")
+    await message.reply(test1_txt)
 
 
-# Пишет сообщение
+#  Пишет сообщение
 @router.message(Command("test2"))
 async def cmd_test2(message: Message):
-    await message.answer("test2")
+    await message.answer(test2_txt)
 
 
-# Отправление ID юзера
+#  Отправление ID юзера
 @router.message(Command("ID"))
 async def cmd_test_id(message: Message):
     await message.reply(f"Твой ID: {message.from_user.id}")
 
 
-# Проверка на отправку сообщения по ID чата
+#  Проверка на отправку сообщения по ID чата с выбором человека
 @router.message(Command("test3"))
 async def cmd_test3(massage: Message, bot: Bot):
-    await bot.send_dice(866669644, emoji=DiceEmoji.DICE)
+    await massage.reply(test3_txt, reply_markup=ReplyKeyboardRemove())
+
+    @router.message(F.text.lower() == "андрей" or "blizuks")
+    async def send_emoji_id(message: Message):
+        await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.DICE)
+
+    @router.message(F.text.lower() == "ваня" or "иван")
+    async def send_emoji_id(message: Message):
+        await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.DICE)
 
 
-# [2]:  Проверка на ввод сообщений
-@router.message(F.text.lower() == "да")
-async def answer_yes(message: Message):
-    await message.answer("Здорово!", reply_markup=ReplyKeyboardRemove())
-
-
-@router.message(F.text.lower() == "нет")
-async def answer_no(message: Message):
-    await message.answer("Никому это не интересно, Стартуем!", reply_markup=ReplyKeyboardRemove())
+@router.message(Command("/help_end"))
+async def cmd_test_id(message: Message):
+    await message.answer(help_end_txt, reply_markup=ReplyKeyboardRemove())

@@ -1,11 +1,24 @@
+#  Подключение библиотек
+from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 
-#  Функция для создания двух горизонтальныхкнопок
-def get_yes_or_no() -> ReplyKeyboardMarkup:
-    kb = ReplyKeyboardBuilder()
-    kb.button(text="Да")
-    kb.button(text="Нет")
-    kb.adjust(2)
-    return kb.as_markup(resize_keyboard=True)
+#  Создание 5 клавиш
+def help_buttons() -> ReplyKeyboardMarkup:
+    builder = ReplyKeyboardBuilder()
+    builder.row(
+        types.KeyboardButton(text="/test1", ),
+        types.KeyboardButton(text="/test2")
+    )
+    #builder.row(
+     #   types.KeyboardButton(text=locale_txt, requests_loation=True)
+    #)
+    builder.row(
+        types.KeyboardButton(text="/ID"),
+        types.KeyboardButton(text="/test3")
+    )
+    builder.row(
+        types.KeyboardButton(text="/help_end")
+    )
+    return builder.as_markup(resize_keyboard=True)
