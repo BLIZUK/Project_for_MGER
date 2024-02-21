@@ -5,8 +5,9 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.dice_emoji import DiceEmoji
 from aiogram.enums.parse_mode import ParseMode
 
-#  Импортируем кнопки из файла button
+#  Импортируем кнопки из файла button.py
 from .button import help_buttons
+#  Импортируем текст из файла text.py
 from .text import welcome, help_txt, help_end_txt, ID_peopl, test1_txt, test2_txt, test3_txt
 
 router = Router(name=__name__)
