@@ -27,13 +27,13 @@ async def cmd_help(message: types.Message):
 #  Отвечает на сообщение
 @router.message(Command("test1"))
 async def cmd_test1(message: Message):
-    await message.reply(test1_txt)
+    await message.answer(test1_txt)
 
 
 #  Пишет сообщение
 @router.message(Command("test2"))
 async def cmd_test2(message: Message):
-    await message.answer(test2_txt)
+    await message.reply(test2_txt)
 
 
 #  Отправление ID юзера
