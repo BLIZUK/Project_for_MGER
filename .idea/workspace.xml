@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Начальная декомпозиция. Добавление кнопок.">
-      <change afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Углубление работы команд и добавление кнопок.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708542076308</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Углубление работы команд и добавление кнопок.">
+      <created>1708548331538</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708548331538</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Углубление работы команд и добавление кнопок.">
+      <created>1708548569970</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708548569970</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +168,7 @@
     <MESSAGE value="Update 2" />
     <MESSAGE value="Update 3" />
     <MESSAGE value="Начальная декомпозиция. Добавление кнопок." />
-    <option name="LAST_COMMIT_MESSAGE" value="Начальная декомпозиция. Добавление кнопок." />
+    <MESSAGE value="Углубление работы команд и добавление кнопок." />
+    <option name="LAST_COMMIT_MESSAGE" value="Углубление работы команд и добавление кнопок." />
   </component>
 </project>
