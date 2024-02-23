@@ -1,5 +1,5 @@
 #  Подключение библиотек
-from aiogram import Router, F, Bot, types
+from aiogram import Router, F, Bot, types, html
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.dice_emoji import DiceEmoji
@@ -25,6 +25,11 @@ async def cmd_help(message: types.Message):
     await message.answer(help_txt, reply_markup=help_buttons())
 
 
+@router.message(F.text.lower() == "help")
+async def cmd_help_txt(message: Message):
+    await message.reply(help_txt, reply_markup=help_buttons())
+
+
 #  Отвечает на сообщение
 @router.message(Command("test1"))
 async def cmd_test1(message: Message):
@@ -43,20 +48,20 @@ async def cmd_test_id(message: Message):
     await message.reply(f"Твой ID: {message.from_user.id}")
 
 
+@router.message(Command("off"))
+async def cmd_test4(message: Message):
+    await message.reply(help_end_txt, reply_markup=ReplyKeyboardRemove())
+
+
 #  Проверка на отправку сообщения по ID чата с выбором человека
 @router.message(Command("test3"))
 async def cmd_test3(massage: Message, bot: Bot):
     await massage.reply(test3_txt, reply_markup=ReplyKeyboardRemove())
 
-    @router.message(F.text.lower() == "андрей" or "blizuks")
+    @router.message(F.text.lower() == "андрей")
     async def send_emoji_id(message: Message):
-        await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.SLOT_MACHINE)
+        await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.DICE)
 
-    @router.message(F.text.lower() == "ваня" or "иван")
+    @router.message(F.text.lower() == "ваня")
     async def send_emoji_id(message: Message):
         await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.SLOT_MACHINE)
-
-
-@router.message(Command("/help_end"))
-async def cmd_test_id(message: Message):
-    await message.answer(help_end_txt, reply_markup=ReplyKeyboardRemove())

@@ -1,6 +1,7 @@
 #  Подключение библиотек
 import asyncio
 import logging
+import sqlite3
 
 from aiogram import Bot, Dispatcher
 from aiogram.enums.parse_mode import ParseMode
@@ -9,8 +10,10 @@ from aiogram.fsm.storage.memory import MemoryStorage
 #  Подключение файлов
 import config
 from routers import router as main_router
+from text import ADMIN
 
 
+#  Инициализация бота
 async def main():
     #  Токен берем из другого файла
     bot = Bot(token=config.BOT_TOKEN, parse_mode=ParseMode.HTML)

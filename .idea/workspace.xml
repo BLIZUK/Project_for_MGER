@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Все никак не могу остановиться, зализываю мелкие огрехи." />
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/text.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -28,22 +32,52 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectId" id="2cJxl7bJ6EKX8U7gUJRPvnBma6U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/blizu/PycharmProjects/Project_for_MGER/Main.py&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.Main.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.commands.executor": "Run",
+    "Python.states.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "BLIZUKs__branch__main",
+    "last_opened_file_path": "C:/Users/blizu/PycharmProjects/Project_for_MGER/Main.py"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Project_for_MGER" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (Main_py)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -109,54 +143,10 @@
       <option name="project" value="LOCAL" />
       <updated>1707847456940</updated>
     </task>
-    <task id="LOCAL-00009" summary="Начальная декомпозиция. Добавление кнопок.">
-      <created>1708542076308</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1708542076308</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Углубление работы команд и добавление кнопок.">
-      <created>1708548331538</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1708548331538</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Углубление работы команд и добавление кнопок.">
-      <created>1708548569970</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1708548569970</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Углубление работы команд и добавление кнопок.">
-      <created>1708548715503</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1708548715503</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Все никак не могу остановиться, зализываю мелкие огрехи.">
-      <created>1708549074289</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1708549074289</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -172,15 +162,33 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="BLIZUKs_branch_main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
     <MESSAGE value="Update 1" />
     <MESSAGE value="Update 2" />
     <MESSAGE value="Update 3" />
-    <MESSAGE value="Начальная декомпозиция. Добавление кнопок." />
-    <MESSAGE value="Углубление работы команд и добавление кнопок." />
-    <MESSAGE value="Все никак не могу остановиться, зализываю мелкие огрехи." />
-    <option name="LAST_COMMIT_MESSAGE" value="Все никак не могу остановиться, зализываю мелкие огрехи." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 3" />
   </component>
 </project>
