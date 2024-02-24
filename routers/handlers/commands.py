@@ -5,10 +5,11 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.dice_emoji import DiceEmoji
 from aiogram.enums.parse_mode import ParseMode
 
+import text
 #  Импортируем кнопки из файла button.py
 from .button import help_buttons
 #  Импортируем текст из файла text.py
-from .text import welcome, help_txt, help_end_txt, ID_peopl, test1_txt, test2_txt, test3_txt
+from .text import welcome, help_txt, help_end_txt, ID_peopl, ID_peopl_num, test1_txt, test2_txt, test3_txt
 
 router = Router(name=__name__)
 
@@ -62,6 +63,8 @@ async def cmd_test3(massage: Message, bot: Bot):
     async def send_emoji_id(message: Message):
         await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.DICE)
 
-    @router.message(F.text.lower() == "ваня")
+    @router.message(F.text)
     async def send_emoji_id(message: Message):
-        await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.SLOT_MACHINE)
+        for i in ID_peopl_num:
+            if message.poll:
+                await message.forward(ID_peopl_num[i], text="obama")
