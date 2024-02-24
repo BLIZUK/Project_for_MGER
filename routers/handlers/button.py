@@ -15,8 +15,8 @@ def help_buttons() -> ReplyKeyboardMarkup:
     #   types.KeyboardButton(text=locale_txt, requests_loation=True)
     # )
     builder.row(
-        types.KeyboardButton(text="/ID"),
         types.KeyboardButton(text="/test3"),
+        types.KeyboardButton(text="/test4")
     )
     builder.row(
         types.KeyboardButton(text="/off")

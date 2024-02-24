@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Переоформление команд">
+      <change afterPath="$PROJECT_DIR$/routers/database/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/text.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -47,6 +49,7 @@
     "Python.__init__.executor": "Run",
     "Python.commands.executor": "Run",
     "Python.states.executor": "Run",
+    "Python.text.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "BLIZUKs__branch__main",
@@ -143,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707847456940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Переоформление команд">
+      <option name="closed" value="true" />
+      <created>1708702822324</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708702822324</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +200,7 @@
     <MESSAGE value="Update 1" />
     <MESSAGE value="Update 2" />
     <MESSAGE value="Update 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 3" />
+    <MESSAGE value="Переоформление команд" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переоформление команд" />
   </component>
 </project>
