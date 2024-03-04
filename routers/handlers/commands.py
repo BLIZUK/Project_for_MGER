@@ -14,7 +14,7 @@ router = Router(name=__name__)
 
 
 # Включение чата и вызов приветственного ответа
-@router.message(Command("start"))  # [1] --> [2]
+@router.message(Command("start"))
 async def cmd_start(message: Message):
     await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome + f"\nТвой ID: {message.from_user.id}"
                                                                               f"", parse_mode=ParseMode.HTML)
@@ -75,7 +75,7 @@ async def cmd_test4(message: Message, bot: Bot):
 
         @router.message(F.text.lower() == "автомат")
         async def cmd_test4_1(message: Message):
-            # if F.text.lower() == "автомат":
+            # if F.text.lower() == "авто":
             for key in (ID_peopl.keys()):
                 await bot.send_message(ID_peopl[key], test4_txt, disable_notification=True,
                                        reply_markup=ReplyKeyboardRemove())
