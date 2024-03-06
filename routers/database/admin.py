@@ -3,38 +3,25 @@ from aiogram import Router, F, Bot
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.parse_mode import ParseMode
-import sys
-#  Импортируем кнопки из файла button.py
+from .admin_button import buttons_admin_off
+#  Импортируем кнопки из файла button_defolt.py
 #  Импортируем текст из файла text.py
 
-from aiogram import Router
-
-from ..handlers.text import ADMIN, ID_peopl, test4_txt, ADMINs
+from ..handlers.text import ADMIN, ID_peopl, ADMINs, SPAm
 
 router = Router(name=__name__)
 
 
-@router.message(Command("test4"))
+@router.message(Command("Рассылка", "р", "Р", "P", "p"))
 async def cmd_test4(message: Message, bot: Bot):
     if message.from_user.id == ADMINs:
-        await message.answer("Выберите режим рассылки:")
-
-        @router.message(F.text.lower() == "автомат")
-        async def cmd_test4_1(message: Message):
-            # if F.text.lower() == "авто":
-            for key in (ID_peopl.keys()):
-                await bot.send_message(ID_peopl[key], test4_txt, disable_notification=True,
-                                       reply_markup=ReplyKeyboardRemove())
-            # elif message.text.lower() == "ручное":
-
-        @router.message(F.text.lower() == "ручное")
-        async def cmd_test4_2(message: Message):
-            await message.reply("Введите нужное сообщение для рассылки: ")
-
-            @router.message(F.text)
-            async def cmd_test4_2_1(message: Message):
+        await message.reply(SPAm)
+        @router.message(F.text)
+        async def cmd_test4_2_1(message: Message):
+            if message.from_user.id == ADMINs:
+                await message.reply("Введите 'off' для прекращения рассылки", reply_markup=buttons_admin_off())
                 mailing = message.text
                 for key in (ID_peopl.keys()):
-                    await bot.send_message(ID_peopl[key], mailing, disable_notification=True)
+                    await bot.send_message(ID_peopl[key], mailing + f"\nby <b>{message.from_user.full_name}</b>", disable_notification=True, parse_mode=ParseMode.HTML )
     else:
         await message.reply("У вас нет прав для такой функции!")

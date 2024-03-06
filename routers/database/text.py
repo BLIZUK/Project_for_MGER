@@ -30,6 +30,6 @@ ADMINs = 866669644
 
 emoji_list = ["DICE", "DART", "BASKETBALL", "FOOTBALL", "SLOT_MACHINE", "BOWLING"]
 
-#  Обработка файла button.py [2]
+#  Обработка файла button_defolt.py [2]
 #  Общие переменные                                                                 -----> [2]
 locale_txt = "Запросить геолокацию"
