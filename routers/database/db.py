@@ -5,7 +5,7 @@ from aiogram import Router
 
 router = Router(name=__name__)
 
-conn = sqlite3.connect("db_MGER")
+conn = sqlite3.connect("")
 cur = conn.cursor()
 cur.execute(""" CREATE TABLE IF NOT EXISTS users(
     user_id INTEGER,

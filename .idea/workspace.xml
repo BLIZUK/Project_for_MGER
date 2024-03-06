@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Добавление и углубление функции рассылки">
+      <change afterPath="$PROJECT_DIR$/routers/database/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_02_2024_21_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_02_2024_21_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kb.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +43,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ivanst75&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="31e3c856-439e-47b3-903f-ebbfa4aad6bc" />
+        <option name="url" value="https://github.com/BLIZUK/Project_for_MGER" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,21 +71,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.commands.executor&quot;: &quot;Run&quot;,
-    &quot;Python.states.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;BLIZUKs__branch__main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/blizu/PycharmProjects/Project_for_MGER/Main.py&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.Main.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.commands.executor": "Run",
+    "Python.states.executor": "Run",
+    "Python.text.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Vanya-2.0",
+    "last_opened_file_path": "C:/Users/admin/PycharmProjects/Project_for_MGER/routers/database"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\database" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Project_for_MGER" />
@@ -72,7 +101,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (Main_py)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -223,6 +251,6 @@
     <MESSAGE value="Update 3" />
     <MESSAGE value="Переоформление команд" />
     <MESSAGE value="Добавление и углубление функции рассылки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление и углубление функции рассылки" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
