@@ -6,7 +6,7 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 def button_send() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     builder.row(
-        types.KeyboardButton(text="/Рассылка"),
+        types.KeyboardButton(text="Рассылка"),
     )
     return builder.as_markup(resize_keyboard=True)
 

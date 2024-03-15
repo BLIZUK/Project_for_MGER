@@ -48,25 +48,21 @@ async def cmd_test2(message: Message):
 
 
 #  Отправление ID юзера
-@router.message(F.text.lower() == "мой id")
-async def cmd_test_id(message: Message):
-    await message.reply(f"Твой ID: {message.from_user.id}")
+#@router.message(F.text.lower() == "мой id")
+#async def cmd_test_id(message: Message):
+    #await message.reply(f"Твой ID: {message.from_user.id}")
 
-
-@router.message(F.text.lower() == "off" or "/off" or "Off" or "/Off")
-async def cmd_test4(message: Message):
-    await message.reply(help_end_txt, reply_markup=ReplyKeyboardRemove())
 
 
 #  Проверка на отправку сообщения по ID чата с выбором человека
-@router.message(Command("test3"))
-async def cmd_test3(message: Message, bot: Bot):
-    await message.reply("Делаю", reply_markup=ReplyKeyboardRemove())
+#@router.message(Command("test3"))
+#async def cmd_test3(message: Message, bot: Bot):
+    #await message.reply("Делаю", reply_markup=ReplyKeyboardRemove())
 
-    @router.message(F.text.lower() == "андрей")
-    async def send_emoji_id(message: Message):
-        await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.DICE)
+    #@router.message(F.text.lower() == "андрей")
+    #async def send_emoji_id(message: Message):
+        #await bot.send_dice(ID_peopl["андрей"], emoji=DiceEmoji.DICE)
 
-    @router.message(F.text.lower() == "ваня")
-    async def send_emoji_id(message: Message):
-        await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.SLOT_MACHINE)
+    #@router.message(F.text.lower() == "ваня")
+    #async def send_emoji_id(message: Message):
+        #await bot.send_dice(ID_peopl["ваня"], emoji=DiceEmoji.SLOT_MACHINE)

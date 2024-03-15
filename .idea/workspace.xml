@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Новая декомпозиция + небольшие изменения в структуре и работе самого бота">
-      <change afterPath="$PROJECT_DIR$/routers/database/admin_button.py" afterDir="false" />
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Структура">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/button_defolt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/admin_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin_button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
     </list>
@@ -61,21 +59,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.Main.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.commands.executor": "Run",
-    "Python.states.executor": "Run",
-    "Python.text.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Vanya-2.0",
-    "last_opened_file_path": "C:/Users/admin/PycharmProjects/Project_for_MGER/routers/database"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commands.executor&quot;: &quot;Run&quot;,
+    &quot;Python.states.executor&quot;: &quot;Run&quot;,
+    &quot;Python.text.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Vanya-2.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/PycharmProjects/Project_for_MGER/routers/database&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\database" />
@@ -201,10 +199,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709735692095</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Структура">
+      <option name="closed" value="true" />
+      <created>1709753109595</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709753109595</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="059a4aa6-d5d1-46c2-8a59-7f7942937605" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -222,6 +233,11 @@
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="059a4aa6-d5d1-46c2-8a59-7f7942937605">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -250,6 +266,7 @@
     <MESSAGE value="Переоформление команд" />
     <MESSAGE value="Добавление и углубление функции рассылки" />
     <MESSAGE value="Новая декомпозиция + небольшие изменения в структуре и работе самого бота" />
-    <option name="LAST_COMMIT_MESSAGE" value="Новая декомпозиция + небольшие изменения в структуре и работе самого бота" />
+    <MESSAGE value="Структура" />
+    <option name="LAST_COMMIT_MESSAGE" value="Структура" />
   </component>
 </project>
