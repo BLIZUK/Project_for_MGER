@@ -8,7 +8,7 @@ from ..database.admin_button import button_send
 #  Импортируем кнопки из файла button_defolt.py
 from .button_defolt import help_buttons_DEF
 #  Импортируем текст из файла text.py
-from .text import (welcome, help_txt, help_end_txt, ID_peopl,
+from .text import (welcome, help_txt, help_end_txt, ID_all_peopl,
                    ADMIN, ADMINs, welcome_for_manuall,
                    help_txt_manuall)
 
