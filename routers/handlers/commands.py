@@ -2,8 +2,6 @@
 from aiogram import Router, F, Bot
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
-from aiogram.enums.dice_emoji import DiceEmoji
-from aiogram.enums.parse_mode import ParseMode
 from ..database.admin_button import button_send
 #  Импортируем кнопки из файла button_defolt.py
 from .button_defolt import help_buttons_DEF
@@ -11,6 +9,8 @@ from .button_defolt import help_buttons_DEF
 from .text import (welcome, help_txt, help_end_txt, ID_all_peopl,
                    ADMIN, ADMINs, welcome_for_manuall,
                    help_txt_manuall)
+from ..database.db import BotDB
+
 
 router = Router(name=__name__)
 
@@ -18,10 +18,13 @@ router = Router(name=__name__)
 # Включение чата и вызов приветственного ответа
 @router.message(Command("start"))
 async def cmd_start(message: Message):
+    user_id = message.from_user.id
+    if (not BotDB().user_exists(user_id)):
+        BotDB().add_user(user_id)
     if message.from_user.id == ADMINs:
         #await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome + f"\nТвой ID: {message.from_user.id}"
                                                                               #f"", parse_mode=ParseMode.HTML)
-        await message.answer(welcome )
+        await message.answer(welcome)
     else:
         await message.answer(welcome_for_manuall + "\n/help - для получения дальнейшей информации" )
 
