@@ -44,7 +44,7 @@ async def cmd_test1(message: Message):
 #  Пишет сообщение
 @router.message(F.text.lower() == "send" or "Send")
 async def cmd_test2(message: Message):
-    await message.reply("Делаю")
+    await message.answer("Делаю")
 
 
 #  Отправление ID юзера

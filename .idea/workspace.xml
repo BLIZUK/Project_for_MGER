@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Теперь рассылка куда более крутая">
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Полностью рабочая рассылка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\database" />
     </key>
   </component>
@@ -221,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710521902466</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Полностью рабочая рассылка">
+      <option name="closed" value="true" />
+      <created>1712170442984</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712170442984</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,6 +296,7 @@
     <MESSAGE value="Новая декомпозиция + небольшие изменения в структуре и работе самого бота" />
     <MESSAGE value="Структура" />
     <MESSAGE value="Теперь рассылка куда более крутая" />
-    <option name="LAST_COMMIT_MESSAGE" value="Теперь рассылка куда более крутая" />
+    <MESSAGE value="Полностью рабочая рассылка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Полностью рабочая рассылка" />
   </component>
 </project>
