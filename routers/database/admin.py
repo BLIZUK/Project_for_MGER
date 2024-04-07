@@ -90,6 +90,12 @@ async def write_send_all(message: Message, bot: Bot, state: FSMContext):
 
 
 @router.message(Command("edit"))
-async def editor(message: Message, state:  FSMContext):
+async def editor(message: Message, state: FSMContext):
     await state.set_state(Stepofedit.edit_defolt)
     await message.answer("Введите имя активиста по образцу 'Иванов Иван Иванович'.")
+
+
+@router.message(Stepofedit.edit_defolt, F.text)
+async def edit_name(message: Message, state: FSMContext):
+    mailing = message.text
+    mailing.split(" ")

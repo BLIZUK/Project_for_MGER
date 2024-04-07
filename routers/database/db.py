@@ -11,12 +11,14 @@ class BotDB:
     def __init__(self):
         self.conn = sqlite3.connect("database.db")
         self.cursor = self.conn.cursor()
+
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS users (
-                            id          INTEGER PRIMARY KEY,
-                            user_id     INTEGER NOT NULL
+                            id          INTEGER UNIQUE,
+                            user_id     INTEGER PRIMARY KEY
+                                                NOT NULL
                                                 UNIQUE,
-                            name        TEXT,
-                            surname     TEXT,
+                            surname        TEXT,
+                            name     TEXT,
                             father_name TEXT,
                             birthday    TEXT,
                             pervichka   TEXT,
@@ -24,9 +26,29 @@ class BotDB:
                             phone       TEXT
                             )''')
 
+        self.cursor.execute('''CREATE TABLE IF NOT EXISTS events (
+                            event_id INT PRIMARY KEY,
+                            event_name VARCHAR(100),
+                            event_date DATE,
+                            event_description TEXT)''')
+
+        self.cursor.execute('''CREATE TABLE IF NOT EXISTS Event_Attendance (
+                            attendance_id INTEGER PRIMARY KEY,
+                            person_id INTEGER,
+                            event_id INTEGER,
+                            attendance_date DATE,
+                            FOREIGN KEY (person_id) REFERENCES users(user_id),
+                            FOREIGN KEY (event_id) REFERENCES events(event_id))''')
+
     def user_exists(self, user_id):
         """Проверяем, есть ли юзер в базе"""
         result = self.cursor.execute("SELECT `id` FROM `users` WHERE `user_id` = ?", (user_id,))
+        return bool(len(result.fetchall()))
+
+    def name_exists(self, user_id):
+        """Проверяем, есть ли имя юзера в базе"""
+        result = self.cursor.execute("SELECT 'id' FROM users WHERE user_id = ? AND (surname IS"
+                                     " NULL OR name IS NULL OR father_name IS NULL)", (user_id,))
         return bool(len(result.fetchall()))
 
     def get_user_id(self, user_id):
@@ -39,6 +61,12 @@ class BotDB:
         self.cursor.execute("INSERT INTO `users` (`user_id`) VALUES (?)", (user_id,))
         return self.conn.commit()
 
+    def add_fullname(self, fullname, user_id):
+        parts = fullname.split()
+        surname, name, father_name = parts
+        self.cursor.execute("UPDATE users SET surname = ?, name = ?, father_name = ? WHERE user_id = ?",
+                            (surname, name, father_name, user_id,))
+        self.conn.commit()
     # async def cmd_start(self, user_id):
     #     user = self.cur.execute("INSERT INTO users VALUES '{key}'" .format(key=user_id)).fetchone()
     #     if not user:

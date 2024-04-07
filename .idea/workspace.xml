@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Базы данных в процессе">
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Базы данных есть, но ещё очень многое впереди">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/admin_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin_button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/database/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/text.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
@@ -245,7 +248,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712412732600</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Базы данных в процессе">
+      <option name="closed" value="true" />
+      <created>1712428063105</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712428063105</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Базы данных есть, но ещё очень многое впереди">
+      <option name="closed" value="true" />
+      <created>1712428092731</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712428092731</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,6 +327,7 @@
     <MESSAGE value="Теперь рассылка куда более крутая" />
     <MESSAGE value="Полностью рабочая рассылка" />
     <MESSAGE value="Базы данных в процессе" />
-    <option name="LAST_COMMIT_MESSAGE" value="Базы данных в процессе" />
+    <MESSAGE value="Базы данных есть, но ещё очень многое впереди" />
+    <option name="LAST_COMMIT_MESSAGE" value="Базы данных есть, но ещё очень многое впереди" />
   </component>
 </project>
