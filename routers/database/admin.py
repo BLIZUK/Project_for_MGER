@@ -3,9 +3,10 @@ from aiogram import Router, F, Bot
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.parse_mode import ParseMode
-from aiogram.fsm.state import State, StatesGroup
 from aiogram.methods.delete_message import DeleteMessage
 from .admin_button import buttons_admin_off, button_choose, button_send
+from FSMmachine import Conditionstep
+
 
 #  Отдельно выделю машину состояний, а точнее FSM, как объект
 from aiogram.fsm.context import FSMContext
@@ -17,25 +18,6 @@ from aiogram.fsm.context import FSMContext
 from ..handlers.text import ADMIN, ID_all_peopl, ID_glad_people, ADMINs
 
 router = Router(name=__name__)
-
-
-class Conditionstep(StatesGroup):
-    #  Состояния бота в виде класса и его атрибутов для рассылки
-    choosing_sender_of_message = State()
-    choosing_sender_of_message_not_all = State()
-    choosing_sender_of_message_all = State()
-
-
-class Stepofedit(StatesGroup):
-    #  Состояния для редактировния активиста в базе данных
-    edit_defolt = State()
-    edit_name = State()
-    edit_surname = State()
-    edit_father_name = State()
-    edit_bithday = State()
-    edit_pervichka = State()
-    edit_photo = State()
-    edit_phone = State()
 
 
 #   ЭТИ 3 ОБРАБОТЧИКА ОТВЕЧАЮТ ЗА РАССЫЛКУ СООБЩЕНИЙ АКТИВИСТАМ ОТ АДМИНА. РАБОТАЮТ В РЕЖИМЕ ЗАПИСИ
@@ -89,13 +71,13 @@ async def write_send_all(message: Message, bot: Bot, state: FSMContext):
                                disable_notification=True, parse_mode=ParseMode.HTML)
 
 
-@router.message(Command("edit"))
-async def editor(message: Message, state: FSMContext):
-    await state.set_state(Stepofedit.edit_defolt)
-    await message.answer("Введите имя активиста по образцу 'Иванов Иван Иванович'.")
+# @router.message(Command("edit"))
+# async def editor(message: Message, state: FSMContext):
+#     await state.set_state(Stepofedit.edit_defolt)
+#     await message.answer("Введите имя активиста по образцу 'Иванов Иван Иванович'.")
 
 
-@router.message(Stepofedit.edit_defolt, F.text)
-async def edit_name(message: Message, state: FSMContext):
-    mailing = message.text
-    mailing.split(" ")
+# @router.message(Stepofedit.edit_defolt, F.text)
+# async def edit_name(message: Message, state: FSMContext):
+#     mailing = message.text
+#     mailing.split(" ")
