@@ -5,7 +5,7 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from ..database.admin_button import button_send
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from FSMmachine import Manualuser
+from FSMmachine import Manualuser, Admini
 #  Импортируем кнопки из файла button_defolt.py
 from .button_defolt import help_buttons_DEF
 #  Импортируем текст из файла text.py
@@ -27,41 +27,42 @@ async def cmd_start(message: Message, state: FSMContext):
     user_id = message.from_user.id
     if (not BotDB().user_exists(user_id)):
         BotDB().add_user(user_id)
-    if message.from_user.id == ADMINs:
-        # await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome + f"\nТвой ID: {message.from_user.id}"
-        # f"", parse_mode=ParseMode.HTML)
-        await message.answer(welcome)
-    else:
-        await message.answer(welcome_for_manuall + "\n/help - для получения дальнейшей информации")
-
     if (BotDB().name_exists(user_id)):
         await message.answer("Введите своё ФИО по образцу 'Иванов Иван Иванович'")
         await state.set_state(Sign.add_name)
+    else:
+        if message.from_user.id == ADMINs:
+            # await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome + f"\nТвой ID: {message.from_user.id}"
+            # f"", parse_mode=ParseMode.HTML)
+            await message.answer(welcome)
+
+        else:
+            await message.answer(welcome_for_manuall + "\n/help - для получения дальнейшей информации")
 
 
 #  Вызывает окно с командами
 @router.message(Command("help"))
-async def cmd_help(message: Message):
+async def cmd_help(message: Message, state: FSMContext):
     if message.from_user.id == ADMINs:
+        await state.set_state(Admini.chossing)
         await message.answer(help_txt, reply_markup=button_send())
     else:
+        await state.set_state(Manualuser.choosing)
         await message.answer(help_txt_manuall, reply_markup=help_buttons_DEF())
 
 
 #  Из базы даннных достатся информация о предстоящих мероприятих
-@router.message(F.text.lower() == "Мероприятия" or "мероприятия")
+@router.message(Manualuser.choosing, F.text == "Мероприятия")
 async def cmd_test1(message: Message, state: FSMContext):
     # Андрей, форматирование на тебе 
     await message.answer("Какое-то отформатированное сообщение типа")
-    await state.set_state(Manualuser.event_see)
 
 
 #  Пишет сообщение админу, предложение какой-то идеи
-@router.message(F.text.lower() == "Предложить идею" or "предложить идею")
+@router.message(Manualuser.choosing, F.text == "Предложить идею" or "предложить идею")
 async def cmd_test2(message: Message, state: FSMContext):
     # Андрей, форматирование на тебе 
     await message.answer("Какое-то отформатированное сообщение типа")
-    await state.set_state(Manualuser.send_to_adm)
 
 
 @router.message(Sign.add_name, F.text)
@@ -75,11 +76,13 @@ async def add_fullname_default(message: Message, state: FSMContext):
 async def active_events_user(message: Message, state: FSMContext):
     events = BotDB().get_event
     print(events)
-    await message.answer("") 
+    await message.answer("")
+
 
 @router.message(Manualuser.send_to_adm, F.text)
 async def send_message_to_adm(message: Message, state: FSMContext):
     pass
+
 #  Отправление ID юзера
 # @router.message(F.text.lower() == "мой id")
 # async def cmd_test_id(message: Message):

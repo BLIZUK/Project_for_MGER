@@ -13,7 +13,7 @@ def button_send() -> ReplyKeyboardMarkup:
     return builder.as_markup(resize_keyboard=True)
 
 
-def button_choose() -> ReplyKeyboardMarkup:
+def button_choose_send() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     builder.row(
         types.KeyboardButton(text="Рассылка для доверенных лиц"),

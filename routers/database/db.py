@@ -30,7 +30,7 @@ class BotDB:
                             event_id INT PRIMARY KEY,
                             event_name VARCHAR(100),
                             event_date TEXT,
-                            place TEXT,)''')
+                            place TEXT)''')
 
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS complete_events (
                             event_id INT PRIMARY KEY,
@@ -76,7 +76,7 @@ class BotDB:
     
     def get_event(self):
         """"ЭТО ДЛЯ ПРОСТОГО ЮЗЕРА, ДЛЯ АДМИНОВ - ДРУГОЕ"""
-        result = self.cursor.execute("SELECT event_name, date_event, place FROM active_events")
+        result = self.cursor.execute("SELECT event_name, event_date, place FROM active_events")
         return result.fetchall()
 
 

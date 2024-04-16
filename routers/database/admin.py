@@ -4,9 +4,9 @@ from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.methods.delete_message import DeleteMessage
-from .admin_button import buttons_admin_off, button_choose, button_send, button_for_event
-from FSMmachine import Conditionstep, Event
-
+from .admin_button import buttons_admin_off, button_choose_send, button_send, button_for_event
+from FSMmachine import Conditionstep, Event, Admini, Sign
+from .db import BotDB
 
 #  Отдельно выделю машину состояний, а точнее FSM, как объект
 from aiogram.fsm.context import FSMContext
@@ -20,12 +20,12 @@ from ..handlers.text import ADMIN, ID_all_peopl, ID_glad_people, ADMINs
 router = Router(name=__name__)
 
 
-#   ЭТИ 3 ОБРАБОТЧИКА ОТВЕЧАЮТ ЗА РАССЫЛКУ СООБЩЕНИЙ АКТИВИСТАМ ОТ АДМИНА. РАБОТАЮТ В РЕЖИМЕ ЗАПИСИ
-@router.message(F.text == "Рассылка")
+#   ЭТИ 4 ОБРАБОТЧИКА ОТВЕЧАЮТ ЗА РАССЫЛКУ СООБЩЕНИЙ АКТИВИСТАМ ОТ АДМИНА. РАБОТАЮТ В РЕЖИМЕ ЗАПИСИ
+@router.message(Admini.chossing, F.text == "Рассылка")
 async def pick_method(message: Message, state: FSMContext):
     if message.from_user.id == ADMINs:
         await state.set_state(Conditionstep.choosing_sender_of_message)
-        await message.answer("Выберите режим рассылки: ", reply_markup=button_choose())
+        await message.answer("Выберите режим рассылки: ", reply_markup=button_choose_send())
 
 
 @router.message(Conditionstep.choosing_sender_of_message, F.text.lower())
@@ -41,9 +41,11 @@ async def choose(message: Message, state: FSMContext):
         await message.reply('Выбран режим рассылки для всех активистов. '
                             'Пересылка работает в режиме записи. Для её завершения напишите "Off".',
                             reply_markup=buttons_admin_off())
-
-    else:
+    elif message.text == "Off":
         await state.clear()
+        await message.answer("Рассылка отменена.", reply_markup=button_send())
+        return
+    else:
         await message.reply("Вы выбрали некорректный режим рассылки.")
 
 
@@ -71,27 +73,42 @@ async def write_send_all(message: Message, bot: Bot, state: FSMContext):
                                disable_notification=True, parse_mode=ParseMode.HTML)
 
 
-@router.message(F.text == "Мероприятия")
+@router.message(Admini.chossing, F.text == "Мероприятия")
 async def events(message: Message, state: FSMContext):
     await state.set_state(Event.event_choose)
-    await message.answer("", reply_markup=button_for_event)
+    await message.answer("Выберете дальнейшнее действие.", reply_markup=button_for_event())
 
 
 @router.message(Event.event_choose, F.text)
 async def choosing_event(message: Message, state: FSMContext):
     if message.text == "Создать мероприятие":
-        await state.set_state(Event.create_event)
+        pass
+        #await state.set_state(Event.create_event)
     elif message.text == "Прошедшие мероприятия":
-        await state.set_state(Event.see_events_complete)
+        pass
+        #await state.set_state(Event.see_events_complete)
     elif message.text == "Предстоящие мероприятия":
-        await state.set_state(Event.see_events_active)
+        result = BotDB().get_event()
+        for i in range(len(result)):
+            about_event = (f"Название мероприятия: {result[i][0]}\n"
+                           f"Дата проведения: {result[i][1]}\n"
+                           f"Место: {result[i][2]}")
+            await message.answer(about_event)
     else:
         await message.answer("Нет такого действия")
 
+
+@router.message(Event.create_event, F.text)
+async def create_event_function(message: Message, state: FSMContext):
+    pass
+
+
+# Вышла пустышка, самая настоящая. В будущем она переместиться в панель инструментолв и оттуда уже будет нести пользу
 @router.message(Command("off"))
 async def off(message: Message, state: FSMContext):
-    await message.answer("Все действия отменены.", reply_markup=)
+    await message.answer("Все действия отменены.")
     await state.clear()
+
 
 # @router.message(Command("edit"))
 # async def editor(message: Message, state: FSMContext):
