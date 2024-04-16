@@ -4,8 +4,8 @@ from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.methods.delete_message import DeleteMessage
-from .admin_button import buttons_admin_off, button_choose, button_send
-from FSMmachine import Conditionstep
+from .admin_button import buttons_admin_off, button_choose, button_send, button_for_event
+from FSMmachine import Conditionstep, Event
 
 
 #  Отдельно выделю машину состояний, а точнее FSM, как объект
@@ -70,6 +70,28 @@ async def write_send_all(message: Message, bot: Bot, state: FSMContext):
         await bot.send_message(ID_all_peopl[key], mail + f"\nby <b>{message.from_user.full_name}</b>",
                                disable_notification=True, parse_mode=ParseMode.HTML)
 
+
+@router.message(F.text == "Мероприятия")
+async def events(message: Message, state: FSMContext):
+    await state.set_state(Event.event_choose)
+    await message.answer("", reply_markup=button_for_event)
+
+
+@router.message(Event.event_choose, F.text)
+async def choosing_event(message: Message, state: FSMContext):
+    if message.text == "Создать мероприятие":
+        await state.set_state(Event.create_event)
+    elif message.text == "Прошедшие мероприятия":
+        await state.set_state(Event.see_events_complete)
+    elif message.text == "Предстоящие мероприятия":
+        await state.set_state(Event.see_events_active)
+    else:
+        await message.answer("Нет такого действия")
+
+@router.message(Command("off"))
+async def off(message: Message, state: FSMContext):
+    await message.answer("Все действия отменены.", reply_markup=)
+    await state.clear()
 
 # @router.message(Command("edit"))
 # async def editor(message: Message, state: FSMContext):

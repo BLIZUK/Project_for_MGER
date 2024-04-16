@@ -8,7 +8,7 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder
 def help_buttons_DEF() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     builder.row(
-        types.KeyboardButton(text="Event", ),
-        types.KeyboardButton(text="Send")
+        types.KeyboardButton(text="Предложить идею"),
+        types.KeyboardButton(text="Мероприятия")
     )
     return builder.as_markup(resize_keyboard=True)

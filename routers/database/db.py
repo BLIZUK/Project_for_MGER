@@ -26,19 +26,25 @@ class BotDB:
                             phone       TEXT
                             )''')
 
-        self.cursor.execute('''CREATE TABLE IF NOT EXISTS events (
+        self.cursor.execute('''CREATE TABLE IF NOT EXISTS active_events (
                             event_id INT PRIMARY KEY,
                             event_name VARCHAR(100),
-                            event_date DATE,
-                            event_description TEXT)''')
+                            event_date TEXT,
+                            place TEXT,)''')
+
+        self.cursor.execute('''CREATE TABLE IF NOT EXISTS complete_events (
+                            event_id INT PRIMARY KEY,
+                            event_name VARCHAR(100),
+                            event_date TEXT,
+                            place TEXT,
+                            event_attedantion INTEGER)''')
 
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS Event_Attendance (
                             attendance_id INTEGER PRIMARY KEY,
                             person_id INTEGER,
                             event_id INTEGER,
-                            attendance_date DATE,
                             FOREIGN KEY (person_id) REFERENCES users(user_id),
-                            FOREIGN KEY (event_id) REFERENCES events(event_id))''')
+                            FOREIGN KEY (event_id) REFERENCES active_events(event_id))''')
 
     def user_exists(self, user_id):
         """Проверяем, есть ли юзер в базе"""
@@ -67,6 +73,14 @@ class BotDB:
         self.cursor.execute("UPDATE users SET surname = ?, name = ?, father_name = ? WHERE user_id = ?",
                             (surname, name, father_name, user_id,))
         self.conn.commit()
+    
+    def get_event(self):
+        """"ЭТО ДЛЯ ПРОСТОГО ЮЗЕРА, ДЛЯ АДМИНОВ - ДРУГОЕ"""
+        result = self.cursor.execute("SELECT event_name, date_event, place FROM active_events")
+        return result.fetchall()
+
+
+        
     # async def cmd_start(self, user_id):
     #     user = self.cur.execute("INSERT INTO users VALUES '{key}'" .format(key=user_id)).fetchone()
     #     if not user:

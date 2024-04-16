@@ -29,6 +29,16 @@ def buttons_admin_off() -> ReplyKeyboardMarkup:
     )
     return builder.as_markup(resize_keyboard=True)
 
+# Нужно сделать resizes всех клавиатур, Уолтер
+def button_for_event() -> ReplyKeyboardMarkup:
+    builder = ReplyKeyboardBuilder()
+    builder.row(
+        types.KeyboardButton(text="Создать мероприятие"),
+        types.KeyboardButton(text="Прошедшие мероприятия"),
+        types.KeyboardButton(text="Предстоящие мероприятия")
+    )
+    return builder.as_markup(resize_keyboard=True)
+
 
 def buttom_admin_edit() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
@@ -42,3 +52,5 @@ def buttom_admin_edit() -> ReplyKeyboardMarkup:
         types.KeyboardButton(text="Телефон")
     )
     return builder.as_markup(resize_keyboard=True)
+
+

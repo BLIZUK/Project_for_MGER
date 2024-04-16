@@ -5,6 +5,7 @@ from aiogram.types import Message, ReplyKeyboardRemove
 from ..database.admin_button import button_send
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
+from FSMmachine import Manualuser
 #  Импортируем кнопки из файла button_defolt.py
 from .button_defolt import help_buttons_DEF
 #  Импортируем текст из файла text.py
@@ -47,25 +48,38 @@ async def cmd_help(message: Message):
         await message.answer(help_txt_manuall, reply_markup=help_buttons_DEF())
 
 
-#  Отвечает на сообщение
-@router.message(F.text.lower() == "event" or "Event")
-async def cmd_test1(message: Message):
-    await message.answer("Делаю")
+#  Из базы даннных достатся информация о предстоящих мероприятих
+@router.message(F.text.lower() == "Мероприятия" or "мероприятия")
+async def cmd_test1(message: Message, state: FSMContext):
+    # Андрей, форматирование на тебе 
+    await message.answer("Какое-то отформатированное сообщение типа")
+    await state.set_state(Manualuser.event_see)
 
 
-#  Пишет сообщение
-@router.message(F.text.lower() == "send" or "Send")
-async def cmd_test2(message: Message):
-    await message.answer("Делаю")
+#  Пишет сообщение админу, предложение какой-то идеи
+@router.message(F.text.lower() == "Предложить идею" or "предложить идею")
+async def cmd_test2(message: Message, state: FSMContext):
+    # Андрей, форматирование на тебе 
+    await message.answer("Какое-то отформатированное сообщение типа")
+    await state.set_state(Manualuser.send_to_adm)
 
 
 @router.message(Sign.add_name, F.text)
 async def add_fullname_default(message: Message, state: FSMContext):
     mailing = message.text
     BotDB().add_fullname(mailing, message.from_user.id)
-
     await state.clear()
 
+
+@router.message(Manualuser.event_see)
+async def active_events_user(message: Message, state: FSMContext):
+    events = BotDB().get_event
+    print(events)
+    await message.answer("") 
+
+@router.message(Manualuser.send_to_adm, F.text)
+async def send_message_to_adm(message: Message, state: FSMContext):
+    pass
 #  Отправление ID юзера
 # @router.message(F.text.lower() == "мой id")
 # async def cmd_test_id(message: Message):
