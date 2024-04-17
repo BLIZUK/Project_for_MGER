@@ -4,32 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="212246b4-b823-4684-ba27-8a364f02a322" name="Changes" comment="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24">
-      <change afterPath="$PROJECT_DIR$/routers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/commands/essential_commands.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/commands/user_commands.py" afterDir="false" />
+    <list default="true" id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FSMmachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FSMmachine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/admin_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin_button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="BLIZUKs_branch_main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,29 +29,23 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2cJxl7bJ6EKX8U7gUJRPvnBma6U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2fBKrxw3bw2Dy0MRrZhRQ3olqnK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Vanya&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/blizu/PycharmProjects/Project_for_MGER/Main.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main.executor": "Run",
+    "Python.admin.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Vanya"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project_for_MGER" />
@@ -99,147 +85,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="212246b4-b823-4684-ba27-8a364f02a322" name="Changes" comment="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24" />
-      <created>1707843630837</created>
+      <changelist id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="" />
+      <created>1713269234092</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707843630837</updated>
+      <updated>1713269234092</updated>
     </task>
-    <task id="LOCAL-00001" summary="Update">
-      <created>1707844416882</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1707844416882</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update">
-      <created>1707845012050</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1707845012050</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Update">
-      <created>1707845811256</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1707845811256</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Update">
-      <created>1707845850464</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1707845850464</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Update">
-      <created>1707845888919</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1707845888919</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Update 1">
-      <created>1707847110440</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1707847110440</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Update 2">
-      <created>1707847296520</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1707847296520</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Update 3">
-      <created>1707847456940</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1707847456940</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Update 0.1:">
-      <created>1707853915322</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1707853915322</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24">
-      <option name="closed" value="true" />
-      <created>1707939031640</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1707939031640</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24">
-      <option name="closed" value="true" />
-      <created>1707939319570</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1707939319570</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24">
-      <option name="closed" value="true" />
-      <created>1707939360259</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1707939360259</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/master" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update" />
-    <MESSAGE value="Update 1" />
-    <MESSAGE value="Update 2" />
-    <MESSAGE value="Update 3" />
-    <MESSAGE value="Update 0.1" />
-    <MESSAGE value="Update 0.1:" />
-    <MESSAGE value="минорное" />
-    <MESSAGE value="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновление: Я добавил аргумент на выключение уведомлений в Test3. 22.29 от 14.02.24" />
   </component>
 </project>
