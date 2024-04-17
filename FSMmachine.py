@@ -4,6 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 
 class Sign(StatesGroup):
     add_name = State()
+    close_sign_up = State()
 
 
 class Event(StatesGroup):

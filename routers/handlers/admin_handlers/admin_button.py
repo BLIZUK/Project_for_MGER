@@ -1,9 +1,10 @@
+# Импорты из Aiogram
 from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 
-def button_send() -> ReplyKeyboardMarkup:
+def button_choosing() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     builder.row(
         types.KeyboardButton(text="Рассылка"),
@@ -28,6 +29,7 @@ def buttons_admin_off() -> ReplyKeyboardMarkup:
         types.KeyboardButton(text="Off"),
     )
     return builder.as_markup(resize_keyboard=True)
+
 
 # Нужно сделать resizes всех клавиатур, Уолтер
 def button_for_event() -> ReplyKeyboardMarkup:

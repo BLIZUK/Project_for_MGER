@@ -4,19 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="">
+    <list default="true" id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="Поменялись состояния и чуть-чуть написаны запросы в db">
+      <change afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/send_to_users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/handlers/command_and_menu/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/handlers/command_and_menu/common_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/handlers/manual_handlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/handlers/manual_handlers/manual_hand.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_02_2024_21_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_02_2024_21_09__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FSMmachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FSMmachine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/admin_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/admin_button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/database/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/admin_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/admin_button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/database/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -29,9 +48,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2fBKrxw3bw2Dy0MRrZhRQ3olqnK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,11 +60,22 @@
   "keyToString": {
     "Python.Main.executor": "Run",
     "Python.admin.executor": "Run",
+    "Python.bot.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Vanya"
+    "git-widget-placeholder": "Vanya",
+    "last_opened_file_path": "C:/Users/admin/PycharmProjects/Project_for_MGER/routers/handlers/command_and_menu/common_command.py"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers\command_and_menu" />
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers" />
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers\admin_handlers" />
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER" />
+      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers\Admin_handlers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Project_for_MGER" />
@@ -91,6 +121,19 @@
       <option name="presentableId" value="Default" />
       <updated>1713269234092</updated>
     </task>
+    <task id="LOCAL-00001" summary="Поменялись состояния и чуть-чуть написаны запросы в db">
+      <option name="closed" value="true" />
+      <created>1713283027406</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713283027406</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Поменялись состояния и чуть-чуть написаны запросы в db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поменялись состояния и чуть-чуть написаны запросы в db" />
   </component>
 </project>
