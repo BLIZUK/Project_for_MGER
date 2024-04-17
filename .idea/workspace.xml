@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="Поменялись состояния и чуть-чуть написаны запросы в db">
-      <change afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/events.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/send_to_users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/handlers/command_and_menu/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/handlers/command_and_menu/common_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/handlers/manual_handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/handlers/manual_handlers/manual_hand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_02_2024_21_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_02_2024_21_09__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FSMmachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FSMmachine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/admin_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/admin_handlers/admin_button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/database/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/handlers/commands.py" beforeDir="false" />
-    </list>
+    <list default="true" id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="Всё поменялось. Долго расписывать" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,11 +109,20 @@
       <option name="project" value="LOCAL" />
       <updated>1713283027406</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Всё поменялось. Долго расписывать">
+      <option name="closed" value="true" />
+      <created>1713383234842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713383234842</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Поменялись состояния и чуть-чуть написаны запросы в db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поменялись состояния и чуть-чуть написаны запросы в db" />
+    <MESSAGE value="Всё поменялось. Долго расписывать" />
+    <option name="LAST_COMMIT_MESSAGE" value="Всё поменялось. Долго расписывать" />
   </component>
 </project>
