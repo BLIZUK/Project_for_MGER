@@ -19,7 +19,8 @@ class BotDB:
                             birthday    TEXT,
                             pervichka   TEXT,
                             photo       TEXT,
-                            phone       TEXT
+                            phone       TEXT,
+                            status      INTEGER
                             )''')
 
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS active_events (
@@ -58,6 +59,11 @@ class BotDB:
         result = self.cursor.execute("SELECT `id` FROM `users` WHERE `user_id` = ?", (user_id,))
         return result.fetchone()[0]
 
+    def get_users(self, status_in_base):
+        """Достаем id юзеров в базе по их статусу"""
+        result = self.cursor.execute("SELECT user_id FROM users WHERE status <= ?", (status_in_base, ))
+        return result.fetchall()
+
     def add_user(self, user_id):
         """Добавляем юзера в базу"""
         self.cursor.execute("INSERT INTO `users` (`user_id`) VALUES (?)", (user_id,))
@@ -70,13 +76,16 @@ class BotDB:
                             (surname, name, father_name, user_id,))
         self.conn.commit()
     
-    def get_event(self):
-        """"ЭТО ДЛЯ ПРОСТОГО ЮЗЕРА, ДЛЯ АДМИНОВ - ДРУГОЕ"""
-        result = self.cursor.execute("SELECT event_name, event_date, place FROM active_events")
-        return result.fetchall()
+    def get_event(self, active=False, past=False):
+        """"Функция достает мероприятия из базы данных"""
+        if active:
+            result = self.cursor.execute("SELECT event_name, event_date, place FROM active_events")
+            return result.fetchall()
+        elif past:
+            result = self.cursor.execute("SELECT event_name, event_date, place FROM complete_events")
+            return result.fetchall()
 
 
-        
     # async def cmd_start(self, user_id):
     #     user = self.cur.execute("INSERT INTO users VALUES '{key}'" .format(key=user_id)).fetchone()
     #     if not user:

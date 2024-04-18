@@ -12,7 +12,7 @@ router = Router(name=__name__)
 @router.message(Manualuser.choosing, F.text == "Мероприятия")
 async def cmd_test1(message: Message, state: FSMContext):
     # Андрей, форматирование на тебе
-    result = BotDB().get_event()
+    result = BotDB().get_event(active=True)
     for i in range(len(result)):
         about_event = (f"Название мероприятия: {result[i][0]}\n"
                        f"Дата проведения: {result[i][1]}\n"

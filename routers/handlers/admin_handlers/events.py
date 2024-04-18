@@ -35,9 +35,8 @@ async def off(message: Message, state: FSMContext):
 
 @router.message(Admini.chossing, F.text == "Мероприятия")
 async def events(message: Message, state: FSMContext):
-    if message.from_user.id == ADMINs:
-        await state.set_state(Event.event_choose)
-        await message.answer("Выберете дальнейшнее действие.", reply_markup=button_for_event())
+    await state.set_state(Event.event_choose)
+    await message.answer("Выберете дальнейшнее действие.", reply_markup=button_for_event())
 
 
 @router.message(Event.event_choose, F.text)
@@ -46,10 +45,15 @@ async def choosing_event(message: Message, state: FSMContext):
         pass
         #await state.set_state(Event.create_event)
     elif message.text == "Прошедшие мероприятия":
-        pass
+        result = BotDB().get_event(past=True)
+        for i in range(len(result)):
+            about_event = (f"Название мероприятия: {result[i][0]}\n"
+                           f"Дата проведения: {result[i][1]}\n"
+                           f"Место: {result[i][2]}")
+            await message.answer(about_event)
         #await state.set_state(Event.see_events_complete)
     elif message.text == "Предстоящие мероприятия":
-        result = BotDB().get_event()
+        result = BotDB().get_event(active=True)
         for i in range(len(result)):
             about_event = (f"Название мероприятия: {result[i][0]}\n"
                            f"Дата проведения: {result[i][1]}\n"
