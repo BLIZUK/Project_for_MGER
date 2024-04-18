@@ -17,6 +17,11 @@ from routers.handlers.text import ADMINs, ID_glad_people, ID_all_peopl
 
 router = Router(name=__name__)
 
+'''
+ЭТОТ ФАЙЛ ГОТОВ, ПРОСТО ПОДКЛЮЧИТЬ БАЗУ С ТРИГЕРАМИ, НО ЭТО ЧУТЬ ПОЗЖЕ
+СЕЙЧАС ПРОСТО НЕ ДО ТАКИХ МЕЛОЧЕЙ.
+'''
+
 
 #   ЭТИ 4 ОБРАБОТЧИКА ОТВЕЧАЮТ ЗА РАССЫЛКУ СООБЩЕНИЙ АКТИВИСТАМ ОТ АДМИНА. РАБОТАЮТ В РЕЖИМЕ ЗАПИСИ
 @router.message(Admini.chossing, F.text == "Рассылка")
