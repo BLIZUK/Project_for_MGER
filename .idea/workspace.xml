@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="Всё поменялось. Долго расписывать" />
+    <list default="true" id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="Все никак не могу остановиться, зализываю мелкие огрехи.">
+      <change beforePath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_for_MGER.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/handlers/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/routers/handlers/text.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Vanya" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,38 +33,38 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2fBKrxw3bw2Dy0MRrZhRQ3olqnK" />
+  <component name="ProjectId" id="2cJxl7bJ6EKX8U7gUJRPvnBma6U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Main.executor": "Run",
-    "Python.admin.executor": "Run",
-    "Python.bot.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Vanya",
-    "last_opened_file_path": "C:/Users/admin/PycharmProjects/Project_for_MGER/routers/handlers/command_and_menu/common_command.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commands.executor&quot;: &quot;Run&quot;,
+    &quot;Python.states.executor&quot;: &quot;Run&quot;,
+    &quot;Python.text.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BLIZUKs__branch__main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/blizu/PycharmProjects/Project_for_MGER/Main.py&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers\command_and_menu" />
-      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers" />
-      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers\admin_handlers" />
-      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER" />
-      <recent name="C:\Users\admin\PycharmProjects\Project_for_MGER\routers\handlers\Admin_handlers" />
-    </key>
-  </component>
+}</component>
   <component name="RunManager">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Project_for_MGER" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -67,7 +72,7 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
@@ -79,11 +84,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -95,34 +95,141 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d355b162-1847-48c6-9ac1-6908a12e2149" name="Changes" comment="" />
-      <created>1713269234092</created>
+      <changelist id="f9bde951-1c15-4f85-a7a8-c2e0732b9d52" name="Changes" comment="" />
+      <created>1707843630837</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713269234092</updated>
+      <updated>1707843630837</updated>
     </task>
-    <task id="LOCAL-00001" summary="Поменялись состояния и чуть-чуть написаны запросы в db">
-      <option name="closed" value="true" />
-      <created>1713283027406</created>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1707844416882</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1713283027406</updated>
+      <updated>1707844416882</updated>
     </task>
-    <task id="LOCAL-00002" summary="Всё поменялось. Долго расписывать">
-      <option name="closed" value="true" />
-      <created>1713383234842</created>
+    <task id="LOCAL-00002" summary="Update">
+      <created>1707845012050</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1713383234842</updated>
+      <updated>1707845012050</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update">
+      <created>1707845811256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707845811256</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update">
+      <created>1707845850464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707845850464</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update">
+      <created>1707845888919</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707845888919</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update 1">
+      <created>1707847110440</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707847110440</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update 2">
+      <created>1707847296520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707847296520</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update 3">
+      <created>1707847456940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707847456940</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Переоформление команд">
+      <option name="closed" value="true" />
+      <created>1708702822324</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708702822324</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавление и углубление функции рассылки">
+      <option name="closed" value="true" />
+      <created>1708784828691</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708784828691</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Создание баз данных">
+      <option name="closed" value="true" />
+      <created>1709537983919</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709537983919</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Blizuk_branch_main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Поменялись состояния и чуть-чуть написаны запросы в db" />
-    <MESSAGE value="Всё поменялось. Долго расписывать" />
-    <option name="LAST_COMMIT_MESSAGE" value="Всё поменялось. Долго расписывать" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Update 1" />
+    <MESSAGE value="Update 2" />
+    <MESSAGE value="Update 3" />
+    <MESSAGE value="Переоформление команд" />
+    <MESSAGE value="Добавление и углубление функции рассылки" />
+    <MESSAGE value="Создание баз данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание баз данных" />
   </component>
 </project>
