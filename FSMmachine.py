@@ -14,6 +14,10 @@ class Event(StatesGroup):
     see_events_active = State()
 
 
+class Activist(StatesGroup):
+    pass
+
+
 class Admini(StatesGroup):
     chossing = State()
 

@@ -35,8 +35,8 @@ async def cmd_start(message: Message, state: FSMContext):
     else:
         id_ = await pick_status(message.from_user.id)
         if message.from_user.id == id_:
-            # await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome + f"\nТвой ID: {message.from_user.id}"
-            # f"", parse_mode=ParseMode.HTML)
+            # await message.answer(f"<b>{message.from_user.full_name}</b>," + welcome + f"\nТвой ID: {
+            # message.from_user.id}" f"", parse_mode=ParseMode.HTML)
             await message.answer(welcome)
 
         else:
