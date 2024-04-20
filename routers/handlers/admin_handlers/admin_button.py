@@ -3,6 +3,8 @@ from aiogram import types
 from aiogram.types import ReplyKeyboardMarkup
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
+#  Включение клавишь для пользователей с правами администратора
+#  Исользуются риплай клавиши (ReplayKeyboard)
 
 def button_choosing() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()

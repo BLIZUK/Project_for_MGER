@@ -10,7 +10,7 @@ from FSMmachine import Admini, Event
 
 # Кнопки
 from routers.handlers.admin_handlers.admin_button import button_for_event, button_choosing
-from routers.handlers.button_defolt import help_buttons_DEF
+from routers.handlers.button_defolt import help_buttons_def
 
 from routers.handlers.text import ADMINs
 
@@ -30,7 +30,7 @@ async def off(message: Message, state: FSMContext):
         await message.answer("Все действия отменены.", reply_markup=button_choosing())
         await state.set_state(Admini.chossing)
     else:
-        await message.answer("Все действия отменены.", reply_markup=help_buttons_DEF())
+        await message.answer("Все действия отменены.", reply_markup=help_buttons_def())
 
 
 @router.message(Admini.chossing, F.text == "Мероприятия")
