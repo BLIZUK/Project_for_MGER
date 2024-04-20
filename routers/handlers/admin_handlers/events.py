@@ -2,7 +2,7 @@
 from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
-from aiogram.filters import Command
+from routers.handlers.text import help_txt
 # Импорт классов состояний
 from FSMmachine import Admini, Event
 
@@ -20,19 +20,6 @@ from database.db import BotDB
 router = Router(name=__name__)
 
 
-@router.message(Command("off"))
-async def off(message: Message, state: FSMContext):
-    current_state = await state.get_state()
-    if current_state is None:
-        return
-    await state.clear()
-    if message.from_user.id == ADMINs:
-        await message.answer("Все действия отменены.", reply_markup=button_choosing())
-        await state.set_state(Admini.chossing)
-    else:
-        await message.answer("Все действия отменены.", reply_markup=help_buttons_def())
-
-
 @router.message(Admini.chossing, F.text == "Мероприятия")
 async def events(message: Message, state: FSMContext):
     await state.set_state(Event.event_choose)
@@ -42,8 +29,8 @@ async def events(message: Message, state: FSMContext):
 @router.message(Event.event_choose, F.text)
 async def choosing_event(message: Message, state: FSMContext):
     if message.text == "Создать мероприятие":
-        pass
-        #await state.set_state(Event.create_event)
+        await state.set_state(Event.create_event)
+        #await message.answer()
     elif message.text == "Прошедшие мероприятия":
         result = BotDB().get_event(past=True)
         for i in range(len(result)):
@@ -59,10 +46,13 @@ async def choosing_event(message: Message, state: FSMContext):
                            f"Дата проведения: {result[i][1]}\n"
                            f"Место: {result[i][2]}")
             await message.answer(about_event)
+    elif message.text == "Вернуться назад":
+        await state.set_state(Admini.chossing)
+        await message.answer(help_txt, reply_markup=button_choosing())
     else:
         await message.answer("Нет такого действия")
 
 
-@router.message(Event.create_event, F.text)
+@router.message(Event.create_event)
 async def create_event_function(message: Message, state: FSMContext):
     pass

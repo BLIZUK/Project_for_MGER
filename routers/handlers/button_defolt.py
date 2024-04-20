@@ -17,6 +17,8 @@ def help_buttons_def() -> ReplyKeyboardMarkup:
     return builder.as_markup(resize_keyboard=True)
 
 
+#  Прокерка рабоыт инлайн кнопок
+
 def check_id_inline_button() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.row(
