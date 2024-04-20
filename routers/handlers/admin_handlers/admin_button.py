@@ -20,6 +20,7 @@ def button_choose_send() -> ReplyKeyboardMarkup:
         types.KeyboardButton(text="Рассылка для доверенных лиц"),
         types.KeyboardButton(text="Общая рассылка"),
     )
+    builder.row(types.KeyboardButton(text="Вернуться назад"))
     return builder.as_markup(resize_keyboard=True)
 
 
@@ -39,6 +40,7 @@ def button_for_event() -> ReplyKeyboardMarkup:
         types.KeyboardButton(text="Прошедшие мероприятия"),
         types.KeyboardButton(text="Предстоящие мероприятия")
     )
+    builder.row(types.KeyboardButton(text="Вернуться назад"))
     return builder.as_markup(resize_keyboard=True)
 
 
@@ -53,6 +55,7 @@ def buttom_admin_edit() -> ReplyKeyboardMarkup:
         types.KeyboardButton(text="Фото"),
         types.KeyboardButton(text="Телефон")
     )
+    builder.row(types.KeyboardButton(text="Вернуться назад"))
     return builder.as_markup(resize_keyboard=True)
 
 

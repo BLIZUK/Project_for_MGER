@@ -54,6 +54,13 @@ async def cmd_help(message: Message, state: FSMContext):
         await message.answer(help_txt_manuall, reply_markup=help_buttons_DEF())
 
 
+@router.message(Command("support"))
+async def cmd_support(message: Message, state: FSMContext):
+    await message.answer(f"Пока что заявки находятся в стадии разработки и по вопросам работе бота"
+                         f"и продолжении разработки вы можете обратиться к"
+                         f"https://t.me/sleginto и https://t.me/blizuk")
+
+
 @router.message(Sign.add_name, F.text)
 async def add_fullname_default(message: Message, state: FSMContext):
     mailing = message.text

@@ -3,7 +3,7 @@ from aiogram import F, Bot, Router
 from aiogram.enums import ParseMode
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
-
+from routers.handlers.text import help_txt
 # Импорт классов состояний
 from FSMmachine import Admini, Conditionstep
 
@@ -24,7 +24,7 @@ router = Router(name=__name__)
 '''
 
 
-#   ЭТИ 4 ОБРАБОТЧИКА ОТВЕЧАЮТ ЗА РАССЫЛКУ СООБЩЕНИЙ АКТИВИСТАМ ОТ АДМИНА. РАБОТАЮТ В РЕЖИМЕ ЗАПИСИ
+#   ЭТИ 3 ОБРАБОТЧИКА ОТВЕЧАЮТ ЗА РАССЫЛКУ СООБЩЕНИЙ АКТИВИСТАМ ОТ АДМИНА. РАБОТАЮТ В РЕЖИМЕ ЗАПИСИ
 @router.message(Admini.chossing, F.text == "Рассылка")
 async def pick_method(message: Message, state: FSMContext):
     await state.set_state(Conditionstep.choosing_sender_of_message)
@@ -33,6 +33,7 @@ async def pick_method(message: Message, state: FSMContext):
 
 @router.message(Conditionstep.choosing_sender_of_message, F.text.lower())
 async def choose(message: Message, state: FSMContext):
+
     if message.text == "Рассылка для доверенных лиц":
         await state.set_state(Conditionstep.choosing_sender_of_message_not_all)
         await message.reply('Выбран режим рассылки для доверенных лиц. '
@@ -44,34 +45,59 @@ async def choose(message: Message, state: FSMContext):
         await message.reply('Выбран режим рассылки для всех активистов. '
                             'Пересылка работает в режиме записи. Для её завершения напишите "Off".',
                             reply_markup=buttons_admin_off())
-    elif message.text == "Off":
+
+    elif message.text == "Вернуться назад":
         await state.set_state(Admini.chossing)
-        await message.answer("Рассылка отменена.", reply_markup=button_choosing())
-        return
+        await message.answer(help_txt, reply_markup=button_choosing())
+
     else:
         await message.reply("Вы выбрали некорректный режим рассылки.")
 
 
-@router.message(Conditionstep.choosing_sender_of_message_not_all, F.text)
-async def write_send_not_all(message: Message, bot: Bot, state: FSMContext):
+@router.message((Conditionstep.choosing_sender_of_message_all or Conditionstep.choosing_sender_of_message_not_all) and F.text)
+async def write_send(message: Message, bot: Bot, state: FSMContext):
+    current_state = await state.get_state()
     mail = message.text
-    result = BotDB().get_users(status_in_base=2)
-    if message.text == "Off":
-        await state.set_state(Admini.chossing)
-        await message.answer("Рассылка заверщена.", reply_markup=button_choosing())
-        return
-    for key in result:
-        await bot.send_message(key[0], mail + f"\nby <b>{message.from_user.full_name}</b>",
-                               disable_notification=True, parse_mode=ParseMode.HTML)
+    if current_state == Conditionstep.choosing_sender_of_message_all:
+        result = BotDB().get_users(status_in_base=10)
+        if message.text == "Off":
+            await state.set_state(Admini.chossing)
+            await message.answer("Рассылка заверщена.", reply_markup=button_choosing())
+            return
+        for key in result:
+            await bot.send_message(key[0], mail + f"\nby <b>{message.from_user.full_name}</b>",
+                                   disable_notification=True, parse_mode=ParseMode.HTML)
+    elif current_state == Conditionstep.choosing_sender_of_message_not_all:
+        result = BotDB().get_users(status_in_base=2)
+        if message.text == "Off":
+            await state.set_state(Admini.chossing)
+            await message.answer("Рассылка заверщена.", reply_markup=button_choosing())
+            return
+        for key in result:
+            await bot.send_message(key[0], mail + f"\nby <b>{message.from_user.full_name}</b>",
+                                   disable_notification=True, parse_mode=ParseMode.HTML)
 
 
-@router.message(Conditionstep.choosing_sender_of_message_all, F.text)
-async def write_send_all(message: Message, bot: Bot, state: FSMContext):
-    mail = message.text
-    if message.text == "Off":
-        await state.set_state(Admini.chossing)
-        await message.answer("Рассылка заверщена.", reply_markup=button_choosing())
-        return
-    for key in ID_all_peopl:
-        await bot.send_message(ID_all_peopl[key], mail + f"\nby <b>{message.from_user.full_name}</b>",
-                               disable_notification=True, parse_mode=ParseMode.HTML)
+# @router.message(Conditionstep.choosing_sender_of_message_not_all, F.text)
+# async def write_send_not_all(message: Message, bot: Bot, state: FSMContext):
+#     mail = message.text
+#     result = BotDB().get_users(status_in_base=2)
+#     if message.text == "Off":
+#         await state.set_state(Admini.chossing)
+#         await message.answer("Рассылка заверщена.", reply_markup=button_choosing())
+#         return
+#     for key in result:
+#         await bot.send_message(key[0], mail + f"\nby <b>{message.from_user.full_name}</b>",
+#                                disable_notification=True, parse_mode=ParseMode.HTML)
+#
+#
+# @router.message(Conditionstep.choosing_sender_of_message_all, F.text)
+# async def write_send_all(message: Message, bot: Bot, state: FSMContext):
+#     mail = message.text
+#     if message.text == "Off":
+#         await state.set_state(Admini.chossing)
+#         await message.answer("Рассылка заверщена.", reply_markup=button_choosing())
+#         return
+#     for key in ID_all_peopl:
+#         await bot.send_message(ID_all_peopl[key], mail + f"\nby <b>{message.from_user.full_name}</b>",
+#                                disable_notification=True, parse_mode=ParseMode.HTML)

@@ -5,16 +5,19 @@ import config
 
 from aiogram import Bot, Dispatcher
 from aiogram.enums.parse_mode import ParseMode
+from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.memory import MemoryStorage
 
 #  Подключение хендлеров
-from routers import router as main_router
+from routers.handlers import router as main_router
 
 
 #  Инициализация бота
 async def main():
+    default_properties = DefaultBotProperties(
+        parse_mode=ParseMode.HTML)
     #  Токен берем из другого файла
-    bot = Bot(token=config.BOT_TOKEN, parse_mode=ParseMode.HTML)
+    bot = Bot(token=config.BOT_TOKEN, default=default_properties)
     # Если не указать storage, то по умолчанию всё равно будет MemoryStorage
     # Но явное лучше неявного =]
     dp = Dispatcher(
